@@ -12,8 +12,8 @@ class StringManipulatorTest {
     public void reverseStringTest() {
         StringManipulator stringManipulator = new StringManipulator();
         assertAll("String Manipulator",
-                () -> assertEquals(null, stringManipulator.reverseString(null)),
-                () -> assertEquals(Compass.Point.NORTH, stringManipulator.reverseString("Something")));
+                () -> assertEquals("", stringManipulator.reverseString("")),
+                () -> assertEquals("ADUCARRAB", stringManipulator.reverseString("BARRACUDA")));
 
     }
 
@@ -22,8 +22,9 @@ class StringManipulatorTest {
     public void isPalindromeTest() {
         StringManipulator stringManipulator = new StringManipulator();
         assertAll("String Manipulator",
-                () -> assertEquals(null, stringManipulator.reverseString(null)),
-                () -> assertEquals(Compass.Point.NORTH, stringManipulator.reverseString("Something")));
+                () -> assertEquals(true, stringManipulator.isPalindrome("")),
+                () -> assertEquals(false, stringManipulator.isPalindrome("VOVEL")),
+                () -> assertEquals(true, stringManipulator.isPalindrome("ABBA")));
 
     }
 
