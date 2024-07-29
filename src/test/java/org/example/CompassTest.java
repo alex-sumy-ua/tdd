@@ -14,15 +14,15 @@ class CompassTest {
         assertAll("Grouped Assertions of RIGHT Direction",
                 () -> assertEquals(null, compass.rotate(null, null)),
 
-                () -> assertEquals(Compass.Point.NORTH, compass.rotate(Compass.Point.EAST, Compass.Direction.RIGHT)),
-                () -> assertEquals(Compass.Point.WEST, compass.rotate(Compass.Point.NORTH, Compass.Direction.RIGHT)),
-                () -> assertEquals(Compass.Point.EAST, compass.rotate(Compass.Point.SOUTH, Compass.Direction.RIGHT)),
-                () -> assertEquals(Compass.Point.SOUTH, compass.rotate(Compass.Point.WEST, Compass.Direction.RIGHT)),
+                () -> assertEquals(Compass.Point.NORTH, compass.rotate(Compass.Point.EAST, Compass.Direction.LEFT)),
+                () -> assertEquals(Compass.Point.WEST, compass.rotate(Compass.Point.NORTH, Compass.Direction.LEFT)),
+                () -> assertEquals(Compass.Point.EAST, compass.rotate(Compass.Point.SOUTH, Compass.Direction.LEFT)),
+                () -> assertEquals(Compass.Point.SOUTH, compass.rotate(Compass.Point.WEST, Compass.Direction.LEFT)),
 
-                () -> assertEquals(Compass.Point.SOUTH, compass.rotate(Compass.Point.EAST, Compass.Direction.LEFT)),
-                () -> assertEquals(Compass.Point.EAST, compass.rotate(Compass.Point.NORTH, Compass.Direction.LEFT)),
-                () -> assertEquals(Compass.Point.WEST, compass.rotate(Compass.Point.SOUTH, Compass.Direction.LEFT)),
-                () -> assertEquals(Compass.Point.NORTH, compass.rotate(Compass.Point.WEST, Compass.Direction.LEFT)));
+                () -> assertEquals(Compass.Point.SOUTH, compass.rotate(Compass.Point.EAST, Compass.Direction.RIGHT)),
+                () -> assertEquals(Compass.Point.EAST, compass.rotate(Compass.Point.NORTH, Compass.Direction.RIGHT)),
+                () -> assertEquals(Compass.Point.WEST, compass.rotate(Compass.Point.SOUTH, Compass.Direction.RIGHT)),
+                () -> assertEquals(Compass.Point.NORTH, compass.rotate(Compass.Point.WEST, Compass.Direction.RIGHT)));
 
 
     }
