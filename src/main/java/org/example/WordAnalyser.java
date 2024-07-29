@@ -2,6 +2,7 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Map;
 
 public class WordAnalyser {
@@ -22,27 +23,32 @@ public class WordAnalyser {
                 out.add(word);
             }
         }
-//        String[] output = new String[out.size()];
-//        for (int i = 0; i < out.size(); i++) {
-//            output[i] = out.get(i);
-//            }
-//
-//        return output;
-
         return out.toArray(new String[0]);
 
     }
 
     public Map<Character, Integer> calculateLetterFrequency(String text) {
         // TODO: Implement the logic to calculate the frequency of each letter in the given text
-//        for (int i = 0; i < text.length(); i++) {
-//            if (text.charAt(i) == ) {
-//
-//            }
-//        }
-
-
-        return null;
+        if (text.isEmpty() || text.length() == 0) return null;
+        int[] letterCounts = new int[26];
+        // Normalize the input to lowercase
+        text = text.toLowerCase();
+        // Iterate over each character in the string
+        for (char c : text.toCharArray()) {
+            // Check if the character is a letter
+            if (c >= 'a' && c <= 'z') {
+                // Update the count at the corresponding index
+                letterCounts[c - 'a']++;
+            }
+        }
+        Map<Character, Integer> map = new HashMap<>();
+        for (char ch = 'a'; ch <= 'z'; ch++) {
+            if (letterCounts[ch - 'a'] > 0) {
+                map.put(ch, letterCounts[ch - 'a']);
+//                System.out.println("ch=" + ch + "; counter=" + letterCounts[ch - 'a']);
+            }
+        }
+        return map;
     }
 
 }
