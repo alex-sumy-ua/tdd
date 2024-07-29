@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class CompassTest {
 
     @Test
-    @DisplayName("First test: Step 3")
+    @DisplayName("First test: Step 6")
     public void rotateTest() {
         Compass compass = new Compass();
         assertAll("Grouped Assertions of RIGHT Direction",
