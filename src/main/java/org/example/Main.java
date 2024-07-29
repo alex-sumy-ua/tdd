@@ -3,8 +3,7 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
 
-        WordAnalyser wa = new WordAnalyser();
-        wa.findLongestWords()
-
+        String[] str = new String[]{"nature"};
+        System.out.println(str);
     }
 }
